@@ -1,16 +1,12 @@
-import atexit
 from pathlib import Path
-import shutil
-import subprocess
 import re
 import logging
-import tempfile
 import pytest
 
 
 logging.getLogger("acquire").setLevel(logging.CRITICAL)
 
-CODE_BLOCK = re.compile(r"```python\n(.*?)```", re.DOTALL)
+CODE_BLOCK = re.compile(r"( *)```python\n(.*?)```", re.DOTALL)
 SKIP = {
     "setup.md",  # has invalid syntax
     "trigger.md",  # has some non-existant paths
@@ -32,4 +28,9 @@ def tutorials():
 @pytest.mark.parametrize("tutorial", tutorials(), ids=lambda x: x.name)
 def test_tutorials(tutorial: Path):
     for code_block in CODE_BLOCK.finditer(tutorial.read_text()):
-        exec(code_block.group(1))
+        whitespace = code_block.group(1)
+        if whitespace:
+            code_block = "\n".join(line[len(whitespace):] for line in code_block.group(2).split("\n"))
+        else:
+            code_block = code_block.group(2)
+        exec(code_block)
