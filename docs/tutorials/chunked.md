@@ -2,9 +2,12 @@
 
 This tutorial will provide an example of writing chunked data to a Zarr storage device.
 
-Zarr has additional capabilities relative to the basic storage devices, namely _chunking_, _compression_, and _multiscale storage_. To enable _chunking_, set the attributes in an instance of the `ChunkingProperties` class. You can learn more about the Zarr capabilities in `Acquire` [here](https://github.com/acquire-project/acquire-driver-zarr).
+Zarr has additional capabilities relative to the basic storage devices, namely _chunking_, _sharding_ (in the case of Zarr V3)_, _compression_, and _multiscale storage_.
+To enable _chunking_, set the attributes in an instance of the `ChunkingProperties` class.
+You can learn more about the Zarr capabilities in Acquire [here](https://github.com/acquire-project/acquire-driver-zarr).
 
-## Configure `Runtime`
+## Configure the acquisition
+
 To start, we'll create a `Runtime` object and configure the streaming process, selecting `Zarr` as the storage device to enable chunking the data.
 
 ```python
@@ -22,44 +25,104 @@ config = runtime.get_configuration()
 # Select the radial sine simulated camera as the video source
 config.video[0].camera.identifier = dm.select(acquire.DeviceKind.Camera, "simulated: radial sin")
 
-# Set the storage to Zarr to take advantage of chunking
+# Use a storage device that supports chunking, in this case, Zarr
 config.video[0].storage.identifier = dm.select(acquire.DeviceKind.Storage, "Zarr")
 
-# Set the time for collecting data for a each frame
-config.video[0].camera.settings.exposure_time_us = 5e4  # 50 ms
+# Delay between each frame
+config.video[0].camera.settings.exposure_time_us = 7e4  # 70 ms
 
-# size of image region of interest on the camera (x, y)
+# Size of image region of interest on the camera (x, y)
 config.video[0].camera.settings.shape = (1920, 1080)
 
-# specify the pixel datatype as a uint8
+# Specify the pixel datatype as uint8
 config.video[0].camera.settings.pixel_type = acquire.SampleType.U8
 
-# Set the max frame count
-config.video[0].max_frame_count = 10 # collect 10 frames
+# Collect no more than 10 frames
+config.video[0].max_frame_count = 10
 
 # Set the output file to out.zarr
-config.video[0].storage.settings.filename = "out.zarr"
+config.video[0].storage.settings.uri = "out.zarr"
 ```
-Below we'll configure the chunking specific settings and update all settings with the `set_configuration` method.
+
+### Storage dimensions
+
+Because Zarr supports n-dimensional arrays, we need to describe how the data we stream should be interpreted.
+We do this by specifying *storage dimensions*, which correspond to the dimensionality of the output array.
+
+Acquire requires at least 3 dimensions: frame width, frame height, and an append dimension.
+The first 2 dimensions are required and may be followed by optional internal dimensions.
+The final "append" dimension is also required.
+
+Each dimension must have a type, for example, space, channel, time, or other.
+This tutorial will use 5 dimensions following the [OME-NGFF specification](https://ngff.openmicroscopy.org/latest/#multiscale-md).
+That is, we will use TCZYX order, with T corresponding to time, C to channel, Z to depth, Y to height, and X to width.
 
 ```python
-# Chunk size may need to be optimized for each acquisition.
-# See Zarr documentation for further guidance:
-# https://zarr.readthedocs.io/en/stable/tutorial.html#chunk-optimizations
-config.video[0].storage.settings.chunking.max_bytes_per_chunk = 32 * 2**20 # 32 MB
+dimension_x = acquire.StorageDimension(
+    name="x",
+    kind="Space",
+    array_size_px=1920,
+    chunk_size_px=960
+)
 
-# x, y dimensions of each chunk
-# 1/2 of the width and height of the image, generating 4 chunks
-config.video[0].storage.settings.chunking.tile.width = 1920 // 2
-config.video[0].storage.settings.chunking.tile.height = 1080 // 2
+dimension_y = acquire.StorageDimension(
+    name="y",
+    kind="Space",
+    array_size_px=1080,
+    chunk_size_px=540
+)
 
-# Update the configuration with the chosen parameters
-config = runtime.set_configuration(config)
+dimension_z = acquire.StorageDimension(
+    name="z",
+    kind="Space",
+    array_size_px=10,
+    chunk_size_px=5
+)
+
+dimension_c = acquire.StorageDimension(
+    name="c",
+    kind="Channel",
+    array_size_px=3,
+    chunk_size_px=1
+)
+
+dimension_t = acquire.StorageDimension(
+    name="t",
+    kind="Time",
+    array_size_px=0,
+    chunk_size_px=10
+)
+
+config.video[0].storage.settings.acquisition_dimensions = [
+    dimension_x,
+    dimension_y,
+    dimension_z,
+    dimension_c,
+    dimension_t
+]
 ```
+
+Notice that each `StorageDimension` object has several attributes.
+- `name` is the name of the dimension. It is used to identify the dimension in the output array and must be unique.
+- `kind` is the type of dimension. It can be `Space`, `Channel`, `Time`, or `Other`.
+- `array_size_px` is the size of the dimension in pixels. It is the total size of the dimension.
+- `chunk_size_px` is the size of the chunks in pixels. It is the size of the chunks in which the data will be stored.
+
+There is an additional field, `shard_size_chunks`, which is used to specify the number of chunks per shard, but it is 
+only used in Zarr V3, which we will discuss in a future tutorial.
+
+The order in which we specify the dimensions is important.
+The order of the dimensions in the `acquisition_dimensions` list determines the order of the dimensions in the output array.
+In this case, the order is `x`, `y`, `z`, `c`, `t`, which corresponds to the order `TCZYX`.
+
+One more thing to notice is that the first two dimensions' `array_size_px` is the same as the camera's shape.
+This is because the first two dimensions correspond to the spatial dimensions of the camera.
 
 ## Collect and Inspect the Data
 
 ```python
+config = runtime.set_configuration(config)
+
 # collect data
 runtime.start()
 runtime.stop()
@@ -72,7 +135,7 @@ You can inspect the Zarr file directory to check that the data saved as expected
 import zarr
 
 # create a zarr Group object
-group = zarr.open(config.video[0].storage.settings.filename)
+group = zarr.open(config.video[0].storage.settings.uri)
 
 # check for the expected # of directories in the zarr container
 assert len(group) == 1
@@ -83,7 +146,7 @@ group["0"]
 
 The output will be:
 ```
-<zarr.core.Array '/0' (10, 1, 1080, 1920) uint8>
+<zarr.core.Array '/0' (10, 3, 10, 1080, 1920) uint8>
 ```
 As expected, we have only 1 top level directory, corresponding to the single array in the group. We would expect more than 1 array only if we were writing [multiscale data](multiscale.md). The overall array shape is (10, 1, 1080, 1920), corresponding to 10 frames, 1 channel, and a height and width of 1080 and 1920, respectively, per frame.
 
