@@ -1,4 +1,4 @@
-# Chunking Data for Zarr Storage
+# Configuring Zarr storage with chunking
 
 This tutorial will provide an example of writing chunked data to a Zarr storage device.
 
@@ -36,9 +36,6 @@ config.video[0].camera.settings.shape = (1920, 1080)
 
 # Specify the pixel datatype as uint8
 config.video[0].camera.settings.pixel_type = acquire.SampleType.U8
-
-# Collect no more than 10 frames
-config.video[0].max_frame_count = 10
 
 # Set the output file to out.zarr
 config.video[0].storage.settings.uri = "out.zarr"
@@ -115,12 +112,28 @@ The order in which we specify the dimensions is important.
 The order of the dimensions in the `acquisition_dimensions` list determines the order of the dimensions in the output array.
 In this case, the order is `x`, `y`, `z`, `c`, `t`, which corresponds to the order `TCZYX`.
 
-One more thing to notice is that the first two dimensions' `array_size_px` is the same as the camera's shape.
+Notice that the first two dimensions' `array_size_px` is the same as the camera's shape.
 This is because the first two dimensions correspond to the spatial dimensions of the camera.
+
+Another thing to notice is that the final dimension, `t`, has an `array_size_px` of 0.
+This is because the size of the append dimension is not known in advance.
+At most, we can say that the size of the append dimension is no larger than the number of frames we want to collect, but
+because acquisition may terminate at any point before reaching the maximum frame count, we set the `array_size_px` to 0.
+
+The number of frames to collect will now depend on the sizes of the internal dimensions.
+For our example, to fill just one chunk of the `c` dimension, we will need to collect
+`dimension_z.array_size_px * dimension_t.chunk_size_px` frames, or in other words, 10 frames.
+To fill a single chunk of the `t` dimension, we will need to collect
+`dimension_z.array_size_px * dimension_c.array_size_px * dimension_t.chunk_size_px` frames, or in other words, 300
+frames.
+
+```python
 
 ## Collect and Inspect the Data
 
 ```python
+config.video[0].max_frame_count = dimension_z.array_size_px * dimension_c.array_size_px * dimension_t.chunk_size_px # 300
+
 config = runtime.set_configuration(config)
 
 # collect data
@@ -141,13 +154,16 @@ group = zarr.open(config.video[0].storage.settings.uri)
 assert len(group) == 1
 
 # inspect the characteristics of the data
-group["0"]
+print(group["0"])
 ```
 
 The output will be:
 ```
-<zarr.core.Array '/0' (10, 3, 10, 1080, 1920) uint8>
+<zarr.core.Array '/0' (1, 3, 10, 1080, 1920) uint8>
 ```
-As expected, we have only 1 top level directory, corresponding to the single array in the group. We would expect more than 1 array only if we were writing [multiscale data](multiscale.md). The overall array shape is (10, 1, 1080, 1920), corresponding to 10 frames, 1 channel, and a height and width of 1080 and 1920, respectively, per frame.
+As expected, we have only 1 top level directory, corresponding to the single array in the group.
+We would expect more than 1 array only if we were writing [multiscale data](multiscale.md).
+The overall array shape is (10, 1, 1080, 1920), corresponding to 10 frames, 1 channel, and a height and width of 1080
+and 1920, respectively, per frame.
 
 [Download this tutorial as a Python script](chunked.py){ .md-button .md-button-center }
