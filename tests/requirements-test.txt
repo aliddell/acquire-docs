@@ -1,3 +1,4 @@
+acquire-imaging
 napari[all]
 numpy
 ome-zarr
