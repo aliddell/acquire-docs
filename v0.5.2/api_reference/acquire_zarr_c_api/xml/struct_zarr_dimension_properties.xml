@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="struct_zarr_dimension_properties" kind="struct" language="C++" prot="public">
+    <compoundname>ZarrDimensionProperties</compoundname>
+    <includes refid="zarr_8types_8h" local="no">zarr.types.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_zarr_dimension_properties_afd94303e63eda420f646fe2c256b8d07_1afd94303e63eda420f646fe2c256b8d07" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* ZarrDimensionProperties::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>ZarrDimensionProperties::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Name of the dimension </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="123" column="20" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_dimension_properties_aabb68f78e50454e92ed877cecfe10333_1aabb68f78e50454e92ed877cecfe10333" prot="public" static="no" mutable="no">
+        <type>ZarrDimensionType</type>
+        <definition>ZarrDimensionType ZarrDimensionProperties::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>ZarrDimensionProperties::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type of the dimension </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="124" column="27" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_dimension_properties_a6e3ff98864c9339f8c3e4ae8d9ce8a67_1a6e3ff98864c9339f8c3e4ae8d9ce8a67" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ZarrDimensionProperties::array_size_px</definition>
+        <argsstring></argsstring>
+        <name>array_size_px</name>
+        <qualifiedname>ZarrDimensionProperties::array_size_px</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Size of the array along this dimension in pixels </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="125" column="18" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_dimension_properties_a1f81ea7441451b6591b443e0f93966ec_1a1f81ea7441451b6591b443e0f93966ec" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ZarrDimensionProperties::chunk_size_px</definition>
+        <argsstring></argsstring>
+        <name>chunk_size_px</name>
+        <qualifiedname>ZarrDimensionProperties::chunk_size_px</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Size of the chunks along this dimension in pixels </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="127" column="18" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_dimension_properties_ab804a67dae0d7299598e2a60db34a57d_1ab804a67dae0d7299598e2a60db34a57d" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ZarrDimensionProperties::shard_size_chunks</definition>
+        <argsstring></argsstring>
+        <name>shard_size_chunks</name>
+        <qualifiedname>ZarrDimensionProperties::shard_size_chunks</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of chunks in a shard along this dimension </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="129" column="18" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_dimension_properties_1ab16e58705b5b101f5b33b517556413b9" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* ZarrDimensionProperties::unit</definition>
+        <argsstring></argsstring>
+        <name>unit</name>
+        <qualifiedname>ZarrDimensionProperties::unit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="131" column="20" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_dimension_properties_a01a02a5cf1b931f2cfaebd3ee8c29879_1a01a02a5cf1b931f2cfaebd3ee8c29879" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ZarrDimensionProperties::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <qualifiedname>ZarrDimensionProperties::scale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unit of the dimension Scale of the dimension </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="132" column="16" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Properties of a dimension of a Zarr array. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="121" column="5" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="122" bodyend="133"/>
+    <listofallmembers>
+      <member refid="struct_zarr_dimension_properties_a6e3ff98864c9339f8c3e4ae8d9ce8a67_1a6e3ff98864c9339f8c3e4ae8d9ce8a67" prot="public" virt="non-virtual"><scope>ZarrDimensionProperties</scope><name>array_size_px</name></member>
+      <member refid="struct_zarr_dimension_properties_a1f81ea7441451b6591b443e0f93966ec_1a1f81ea7441451b6591b443e0f93966ec" prot="public" virt="non-virtual"><scope>ZarrDimensionProperties</scope><name>chunk_size_px</name></member>
+      <member refid="struct_zarr_dimension_properties_afd94303e63eda420f646fe2c256b8d07_1afd94303e63eda420f646fe2c256b8d07" prot="public" virt="non-virtual"><scope>ZarrDimensionProperties</scope><name>name</name></member>
+      <member refid="struct_zarr_dimension_properties_a01a02a5cf1b931f2cfaebd3ee8c29879_1a01a02a5cf1b931f2cfaebd3ee8c29879" prot="public" virt="non-virtual"><scope>ZarrDimensionProperties</scope><name>scale</name></member>
+      <member refid="struct_zarr_dimension_properties_ab804a67dae0d7299598e2a60db34a57d_1ab804a67dae0d7299598e2a60db34a57d" prot="public" virt="non-virtual"><scope>ZarrDimensionProperties</scope><name>shard_size_chunks</name></member>
+      <member refid="struct_zarr_dimension_properties_aabb68f78e50454e92ed877cecfe10333_1aabb68f78e50454e92ed877cecfe10333" prot="public" virt="non-virtual"><scope>ZarrDimensionProperties</scope><name>type</name></member>
+      <member refid="struct_zarr_dimension_properties_1ab16e58705b5b101f5b33b517556413b9" prot="public" virt="non-virtual"><scope>ZarrDimensionProperties</scope><name>unit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

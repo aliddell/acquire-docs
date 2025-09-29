@@ -1,0 +1,189 @@
+\doxysection{zarr.\+types.\+h}
+\hypertarget{zarr_8types_8h_source}{}\label{zarr_8types_8h_source}\index{C:/repos/acquire-\/zarr/include/zarr.types.h@{C:/repos/acquire-\/zarr/include/zarr.types.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ H\_ACQUIRE\_ZARR\_TYPES\_V0}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ H\_ACQUIRE\_ZARR\_TYPES\_V0}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00014\ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ ZarrStatusCode\_Success\ =\ 0,}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ ZarrStatusCode\_InvalidArgument,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ ZarrStatusCode\_Overflow,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ ZarrStatusCode\_InvalidIndex,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ ZarrStatusCode\_NotYetImplemented,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ ZarrStatusCode\_InternalError,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ ZarrStatusCode\_OutOfMemory,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ ZarrStatusCode\_IOError,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ ZarrStatusCode\_CompressionError,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ ZarrStatusCode\_InvalidSettings,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ ZarrStatusCode\_WillNotOverwrite,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ ZarrStatusCodeCount,}
+\DoxyCodeLine{00027\ \ \ \ \ \}\ ZarrStatusCode;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ ZarrVersion\_2\ =\ 2,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ ZarrVersion\_3,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ ZarrVersionCount}
+\DoxyCodeLine{00034\ \ \ \ \ \}\ ZarrVersion;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ ZarrLogLevel\_Debug\ =\ 0,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ ZarrLogLevel\_Info,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ ZarrLogLevel\_Warning,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ ZarrLogLevel\_Error,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ ZarrLogLevel\_None,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ ZarrLogLevelCount}
+\DoxyCodeLine{00044\ \ \ \ \ \}\ ZarrLogLevel;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ ZarrDataType\_uint8\ =\ 0,}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ ZarrDataType\_uint16,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ ZarrDataType\_uint32,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ ZarrDataType\_uint64,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ ZarrDataType\_int8,}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ ZarrDataType\_int16,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ ZarrDataType\_int32,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ ZarrDataType\_int64,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ ZarrDataType\_float32,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ ZarrDataType\_float64,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ ZarrDataTypeCount}
+\DoxyCodeLine{00059\ \ \ \ \ \}\ ZarrDataType;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00062\ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ ZarrCompressor\_None\ =\ 0,}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ ZarrCompressor\_Blosc1,}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ ZarrCompressorCount}
+\DoxyCodeLine{00066\ \ \ \ \ \}\ ZarrCompressor;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00069\ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ ZarrCompressionCodec\_None\ =\ 0,}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ ZarrCompressionCodec\_BloscLZ4,}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ ZarrCompressionCodec\_BloscZstd,}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ ZarrCompressionCodecCount}
+\DoxyCodeLine{00074\ \ \ \ \ \}\ ZarrCompressionCodec;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00077\ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ ZarrDimensionType\_Space\ =\ 0,}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ ZarrDimensionType\_Channel,}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ ZarrDimensionType\_Time,}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ ZarrDimensionType\_Other,}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ ZarrDimensionTypeCount}
+\DoxyCodeLine{00083\ \ \ \ \ \}\ ZarrDimensionType;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00086\ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ ZarrDownsamplingMethod\_Decimate\ =\ 0,}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ ZarrDownsamplingMethod\_Mean,}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ ZarrDownsamplingMethod\_Min,}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ ZarrDownsamplingMethod\_Max,}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ ZarrDownsamplingMethodCount,}
+\DoxyCodeLine{00092\ \ \ \ \ \}\ ZarrDownsamplingMethod;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00098\ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ endpoint;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ bucket\_name;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ region;}
+\DoxyCodeLine{00102\ \ \ \ \ \}\ \mbox{\hyperlink{struct_zarr_s3_settings}{ZarrS3Settings}};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00111\ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ ZarrCompressor\ \mbox{\hyperlink{struct_zarr_compression_settings_ae15ecdae1f88836eb4333a4f5b41019e_ae15ecdae1f88836eb4333a4f5b41019e}{compressor}};\ \ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ ZarrCompressionCodec\ \mbox{\hyperlink{struct_zarr_compression_settings_a1982ea0bf30f7e890738367a203af15d_a1982ea0bf30f7e890738367a203af15d}{codec}};\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_zarr_compression_settings_a889112581f4bf1be313467e7964fdab5_a889112581f4bf1be313467e7964fdab5}{level}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_zarr_compression_settings_a0edc976983c62ceea11f43a9195f2e4c_a0edc976983c62ceea11f43a9195f2e4c}{shuffle}};\ }
+\DoxyCodeLine{00116\ \ \ \ \ \}\ \mbox{\hyperlink{struct_zarr_compression_settings}{ZarrCompressionSettings}};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00122\ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{struct_zarr_dimension_properties_afd94303e63eda420f646fe2c256b8d07_afd94303e63eda420f646fe2c256b8d07}{name}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ ZarrDimensionType\ \mbox{\hyperlink{struct_zarr_dimension_properties_aabb68f78e50454e92ed877cecfe10333_aabb68f78e50454e92ed877cecfe10333}{type}};\ \ \ \ \ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_zarr_dimension_properties_a6e3ff98864c9339f8c3e4ae8d9ce8a67_a6e3ff98864c9339f8c3e4ae8d9ce8a67}{array\_size\_px}};\ \ \ \ \ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_zarr_dimension_properties_a1f81ea7441451b6591b443e0f93966ec_a1f81ea7441451b6591b443e0f93966ec}{chunk\_size\_px}};\ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_zarr_dimension_properties_ab804a67dae0d7299598e2a60db34a57d_ab804a67dae0d7299598e2a60db34a57d}{shard\_size\_chunks}};\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ unit;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_zarr_dimension_properties_a01a02a5cf1b931f2cfaebd3ee8c29879_a01a02a5cf1b931f2cfaebd3ee8c29879}{scale}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00133\ \ \ \ \ \}\ \mbox{\hyperlink{struct_zarr_dimension_properties}{ZarrDimensionProperties}};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00143\ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ output\_key;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_zarr_compression_settings}{ZarrCompressionSettings}}*\ compression\_settings;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_zarr_dimension_properties}{ZarrDimensionProperties}}*\ dimensions;}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ dimension\_count;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ ZarrDataType\ data\_type;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ multiscale;}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ ZarrDownsamplingMethod\ downsampling\_method;}
+\DoxyCodeLine{00151\ \ \ \ \ \}\ \mbox{\hyperlink{struct_zarr_array_settings}{ZarrArraySettings}};}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00158\ \ \ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{struct_zarr_h_c_s_field_of_view_adddcbe0f8a10900b1135c570874f76ad_adddcbe0f8a10900b1135c570874f76ad}{path}};\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_zarr_h_c_s_field_of_view_aeaadfd712d96305c318f46fa3f033e95_aeaadfd712d96305c318f46fa3f033e95}{acquisition\_id}};\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_zarr_h_c_s_field_of_view_ad3421d563fbd4fb3c25928f1ffa16401_ad3421d563fbd4fb3c25928f1ffa16401}{has\_acquisition\_id}};\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_zarr_array_settings}{ZarrArraySettings}}*\ \mbox{\hyperlink{struct_zarr_h_c_s_field_of_view_a9864c430bffeeb51ae12557eaa88f54d_a9864c430bffeeb51ae12557eaa88f54d}{array\_settings}};\ }
+\DoxyCodeLine{00163\ \ \ \ \ \}\ \mbox{\hyperlink{struct_zarr_h_c_s_field_of_view}{ZarrHCSFieldOfView}};}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00169\ \ \ \ \ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{struct_zarr_h_c_s_well_ab9566796a3904f26411c75883e5fc8b4_ab9566796a3904f26411c75883e5fc8b4}{row\_name}};\ \ \ \ }
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{struct_zarr_h_c_s_well_a4caf75548b9e62ccfbece223303d3ede_a4caf75548b9e62ccfbece223303d3ede}{column\_name}};\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_zarr_h_c_s_field_of_view}{ZarrHCSFieldOfView}}*\ \mbox{\hyperlink{struct_zarr_h_c_s_well_a5d0b68f5085806c7d93d8e6248041760_a5d0b68f5085806c7d93d8e6248041760}{images}};\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{struct_zarr_h_c_s_well_abd54740f9e5a9cee3992e561fbdfc3aa_abd54740f9e5a9cee3992e561fbdfc3aa}{image\_count}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00174\ \ \ \ \ \}\ \mbox{\hyperlink{struct_zarr_h_c_s_well}{ZarrHCSWell}};}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00181\ \ \ \ \ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_zarr_h_c_s_acquisition_a1867789bad748eddd85f4ee5b84e8a2d_a1867789bad748eddd85f4ee5b84e8a2d}{id}};\ \ \ \ \ \ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{struct_zarr_h_c_s_acquisition_a558ed1c2c44b9a6a53c25e63b64dece5_a558ed1c2c44b9a6a53c25e63b64dece5}{name}};\ }
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_zarr_h_c_s_acquisition_ad8ea68757802be550fd37e7391a41109_ad8ea68757802be550fd37e7391a41109}{description}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ uint64\_t\ \mbox{\hyperlink{struct_zarr_h_c_s_acquisition_a8bf16535860fb112ce7ab1ef253cc58e_a8bf16535860fb112ce7ab1ef253cc58e}{start\_time}};\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_zarr_h_c_s_acquisition_a10770d54c50a95efd840f436786f9c70_a10770d54c50a95efd840f436786f9c70}{has\_start\_time}};\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ uint64\_t\ \mbox{\hyperlink{struct_zarr_h_c_s_acquisition_ab1d333e461a56465904a3e38acd03a92_ab1d333e461a56465904a3e38acd03a92}{end\_time}};\ \ \ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_zarr_h_c_s_acquisition_a8f48d79776cac7981ce3faf13ddc5a0f_a8f48d79776cac7981ce3faf13ddc5a0f}{has\_end\_time}};\ \ \ }
+\DoxyCodeLine{00190\ \ \ \ \ \}\ \mbox{\hyperlink{struct_zarr_h_c_s_acquisition}{ZarrHCSAcquisition}};}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00196\ \ \ \ \ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{struct_zarr_h_c_s_plate_aa0c4af455e6e718eee0798c23e7547b8_aa0c4af455e6e718eee0798c23e7547b8}{path}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{struct_zarr_h_c_s_plate_a4aafaa1dca510c09307b67344a23b157_a4aafaa1dca510c09307b67344a23b157}{name}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}**\ \mbox{\hyperlink{struct_zarr_h_c_s_plate_abe316cff5bcb695f1a26bae20ac83c08_abe316cff5bcb695f1a26bae20ac83c08}{row\_names}};\ }
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{struct_zarr_h_c_s_plate_aba40df71c0f3ddde3f7565d86ba6ce1f_aba40df71c0f3ddde3f7565d86ba6ce1f}{row\_count}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}**\ \mbox{\hyperlink{struct_zarr_h_c_s_plate_a60fc6e16e954b57a8c7351053ad5fe21_a60fc6e16e954b57a8c7351053ad5fe21}{column\_names}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{struct_zarr_h_c_s_plate_a3f04bf79936526a822519169bbbd4cf3_a3f04bf79936526a822519169bbbd4cf3}{column\_count}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_zarr_h_c_s_well}{ZarrHCSWell}}*\ \mbox{\hyperlink{struct_zarr_h_c_s_plate_a2bdb0825ec88bb8b0a3b48b35a790fb0_a2bdb0825ec88bb8b0a3b48b35a790fb0}{wells}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{struct_zarr_h_c_s_plate_ae939f5d572fdf15d006807e9d12f2ef7_ae939f5d572fdf15d006807e9d12f2ef7}{well\_count}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_zarr_h_c_s_acquisition}{ZarrHCSAcquisition}}*\ \mbox{\hyperlink{struct_zarr_h_c_s_plate_aa58fc6724d23972b0c2eac81966995c0_aa58fc6724d23972b0c2eac81966995c0}{acquisitions}};\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{struct_zarr_h_c_s_plate_ad52e1be21588c56d1829d3afc368569b_ad52e1be21588c56d1829d3afc368569b}{acquisition\_count}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00207\ \ \ \ \ \}\ \mbox{\hyperlink{struct_zarr_h_c_s_plate}{ZarrHCSPlate}};}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00215\ \ \ \ \ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_zarr_h_c_s_plate}{ZarrHCSPlate}}*\ \mbox{\hyperlink{struct_zarr_h_c_s_settings_a26b039393c99b9f01f2fe0894f3917ba_a26b039393c99b9f01f2fe0894f3917ba}{plates}};\ }
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{struct_zarr_h_c_s_settings_afbd9aa4df35335dcb44a01f268732345_afbd9aa4df35335dcb44a01f268732345}{plate\_count}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00218\ \ \ \ \ \}\ \mbox{\hyperlink{struct_zarr_h_c_s_settings}{ZarrHCSSettings}};}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00221\ \}}
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ H\_ACQUIRE\_ZARR\_TYPES\_V0}}
+
+\end{DoxyCode}

@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="struct_zarr_array_settings" kind="struct" language="C++" prot="public">
+    <compoundname>ZarrArraySettings</compoundname>
+    <includes refid="zarr_8types_8h" local="no">zarr.types.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_zarr_array_settings_1a72719cae2ae951a343256963d74b3d79" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* ZarrArraySettings::output_key</definition>
+        <argsstring></argsstring>
+        <name>output_key</name>
+        <qualifiedname>ZarrArraySettings::output_key</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="144" column="20" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_array_settings_1a1098f0b66ba82f72b8b57f4ee45a97cc" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_zarr_compression_settings" kindref="compound">ZarrCompressionSettings</ref> *</type>
+        <definition>ZarrCompressionSettings* ZarrArraySettings::compression_settings</definition>
+        <argsstring></argsstring>
+        <name>compression_settings</name>
+        <qualifiedname>ZarrArraySettings::compression_settings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="145" column="33" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_array_settings_1abd0aca784469630ea8972558ff2df2fe" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_zarr_dimension_properties" kindref="compound">ZarrDimensionProperties</ref> *</type>
+        <definition>ZarrDimensionProperties* ZarrArraySettings::dimensions</definition>
+        <argsstring></argsstring>
+        <name>dimensions</name>
+        <qualifiedname>ZarrArraySettings::dimensions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="146" column="33" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_array_settings_1aff3cb5f63ca1bb2e6100f5a48b8b75f7" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ZarrArraySettings::dimension_count</definition>
+        <argsstring></argsstring>
+        <name>dimension_count</name>
+        <qualifiedname>ZarrArraySettings::dimension_count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="147" column="16" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_array_settings_1a230b1d9b11c3e6f1f10279e8b19672ee" prot="public" static="no" mutable="no">
+        <type>ZarrDataType</type>
+        <definition>ZarrDataType ZarrArraySettings::data_type</definition>
+        <argsstring></argsstring>
+        <name>data_type</name>
+        <qualifiedname>ZarrArraySettings::data_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="148" column="22" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_array_settings_1aace230c5ab87f2617583ae7469e9b9fd" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ZarrArraySettings::multiscale</definition>
+        <argsstring></argsstring>
+        <name>multiscale</name>
+        <qualifiedname>ZarrArraySettings::multiscale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="149" column="14" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_array_settings_1a703a7cd72c39badf561cbb23cc3d0164" prot="public" static="no" mutable="no">
+        <type>ZarrDownsamplingMethod</type>
+        <definition>ZarrDownsamplingMethod ZarrArraySettings::downsampling_method</definition>
+        <argsstring></argsstring>
+        <name>downsampling_method</name>
+        <qualifiedname>ZarrArraySettings::downsampling_method</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="150" column="32" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Properties of a Zarr array. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>The dimensions array may be allocated with ZarrArraySettings_create_dimension_array and freed with ZarrArraySettings_destroy_dimension_array. The order in which you set the dimension properties in the array should match the order of the dimensions from slowest to fastest changing, for example, [Z, Y, X] for a 3D dataset. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>ZarrArraySettings</label>
+        <link refid="struct_zarr_array_settings"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>compression_settings</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dimensions</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ZarrCompressionSettings</label>
+        <link refid="struct_zarr_compression_settings"/>
+      </node>
+      <node id="3">
+        <label>ZarrDimensionProperties</label>
+        <link refid="struct_zarr_dimension_properties"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="142" column="5" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="143" bodyend="151"/>
+    <listofallmembers>
+      <member refid="struct_zarr_array_settings_1a1098f0b66ba82f72b8b57f4ee45a97cc" prot="public" virt="non-virtual"><scope>ZarrArraySettings</scope><name>compression_settings</name></member>
+      <member refid="struct_zarr_array_settings_1a230b1d9b11c3e6f1f10279e8b19672ee" prot="public" virt="non-virtual"><scope>ZarrArraySettings</scope><name>data_type</name></member>
+      <member refid="struct_zarr_array_settings_1aff3cb5f63ca1bb2e6100f5a48b8b75f7" prot="public" virt="non-virtual"><scope>ZarrArraySettings</scope><name>dimension_count</name></member>
+      <member refid="struct_zarr_array_settings_1abd0aca784469630ea8972558ff2df2fe" prot="public" virt="non-virtual"><scope>ZarrArraySettings</scope><name>dimensions</name></member>
+      <member refid="struct_zarr_array_settings_1a703a7cd72c39badf561cbb23cc3d0164" prot="public" virt="non-virtual"><scope>ZarrArraySettings</scope><name>downsampling_method</name></member>
+      <member refid="struct_zarr_array_settings_1aace230c5ab87f2617583ae7469e9b9fd" prot="public" virt="non-virtual"><scope>ZarrArraySettings</scope><name>multiscale</name></member>
+      <member refid="struct_zarr_array_settings_1a72719cae2ae951a343256963d74b3d79" prot="public" virt="non-virtual"><scope>ZarrArraySettings</scope><name>output_key</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

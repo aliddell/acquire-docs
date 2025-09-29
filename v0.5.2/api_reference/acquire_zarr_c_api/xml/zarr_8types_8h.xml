@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="zarr_8types_8h" kind="file" language="C++">
+    <compoundname>zarr.types.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="acquire_8zarr_8h" local="yes">C:/repos/acquire-zarr/include/acquire.zarr.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/repos/acquire-zarr/include/zarr.types.h</label>
+        <link refid="zarr_8types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>C:/repos/acquire-zarr/include/acquire.zarr.h</label>
+        <link refid="acquire_8zarr_8h_source"/>
+      </node>
+      <node id="1">
+        <label>C:/repos/acquire-zarr/include/zarr.types.h</label>
+        <link refid="zarr_8types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_zarr_s3_settings" prot="public">ZarrS3Settings</innerclass>
+    <innerclass refid="struct_zarr_compression_settings" prot="public">ZarrCompressionSettings</innerclass>
+    <innerclass refid="struct_zarr_dimension_properties" prot="public">ZarrDimensionProperties</innerclass>
+    <innerclass refid="struct_zarr_array_settings" prot="public">ZarrArraySettings</innerclass>
+    <innerclass refid="struct_zarr_h_c_s_field_of_view" prot="public">ZarrHCSFieldOfView</innerclass>
+    <innerclass refid="struct_zarr_h_c_s_well" prot="public">ZarrHCSWell</innerclass>
+    <innerclass refid="struct_zarr_h_c_s_acquisition" prot="public">ZarrHCSAcquisition</innerclass>
+    <innerclass refid="struct_zarr_h_c_s_plate" prot="public">ZarrHCSPlate</innerclass>
+    <innerclass refid="struct_zarr_h_c_s_settings" prot="public">ZarrHCSSettings</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="zarr_8types_8h_1af974a576fb9cc15e629ae83b24254e42" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ZarrDownsamplingMethod</name>
+        <enumvalue id="zarr_8types_8h_1af974a576fb9cc15e629ae83b24254e42af9a74ab9c973bbabbeca84536dfeb9bb" prot="public">
+          <name>ZarrDownsamplingMethod_Decimate</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="zarr_8types_8h_1af974a576fb9cc15e629ae83b24254e42ae742b5aa17fadcfb640b6c4f602e8032" prot="public">
+          <name>ZarrDownsamplingMethod_Mean</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="zarr_8types_8h_1af974a576fb9cc15e629ae83b24254e42a69746f41ff3847a0de794a8702de79bd" prot="public">
+          <name>ZarrDownsamplingMethod_Min</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="zarr_8types_8h_1af974a576fb9cc15e629ae83b24254e42a105ccbd539df8af84f7d4f56e5c2793f" prot="public">
+          <name>ZarrDownsamplingMethod_Max</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="zarr_8types_8h_1af974a576fb9cc15e629ae83b24254e42a1ce224607432209428cc182093ae6467" prot="public">
+          <name>ZarrDownsamplingMethodCount</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/zarr.types.h" line="85" column="5" bodyfile="C:/repos/acquire-zarr/include/zarr.types.h" bodystart="86" bodyend="92"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>H_ACQUIRE_ZARR_TYPES_V0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>H_ACQUIRE_ZARR_TYPES_V0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrStatusCode_Success<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrStatusCode_InvalidArgument,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrStatusCode_Overflow,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrStatusCode_InvalidIndex,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrStatusCode_NotYetImplemented,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrStatusCode_InternalError,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrStatusCode_OutOfMemory,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrStatusCode_IOError,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrStatusCode_CompressionError,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrStatusCode_InvalidSettings,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrStatusCode_WillNotOverwrite,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrStatusCodeCount,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>ZarrStatusCode;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrVersion_2<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrVersion_3,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrVersionCount</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>ZarrVersion;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrLogLevel_Debug<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrLogLevel_Info,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrLogLevel_Warning,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrLogLevel_Error,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrLogLevel_None,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrLogLevelCount</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>ZarrLogLevel;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDataType_uint8<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDataType_uint16,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDataType_uint32,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDataType_uint64,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDataType_int8,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDataType_int16,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDataType_int32,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDataType_int64,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDataType_float32,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDataType_float64,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDataTypeCount</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>ZarrDataType;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrCompressor_None<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrCompressor_Blosc1,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrCompressorCount</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>ZarrCompressor;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrCompressionCodec_None<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrCompressionCodec_BloscLZ4,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrCompressionCodec_BloscZstd,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrCompressionCodecCount</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>ZarrCompressionCodec;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDimensionType_Space<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDimensionType_Channel,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDimensionType_Time,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDimensionType_Other,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDimensionTypeCount</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>ZarrDimensionType;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDownsamplingMethod_Decimate<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDownsamplingMethod_Mean,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDownsamplingMethod_Min,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDownsamplingMethod_Max,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDownsamplingMethodCount,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>ZarrDownsamplingMethod;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="struct_zarr_s3_settings" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>endpoint;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>bucket_name;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>region;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="struct_zarr_s3_settings" kindref="compound">ZarrS3Settings</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="struct_zarr_compression_settings" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112" refid="struct_zarr_compression_settings_ae15ecdae1f88836eb4333a4f5b41019e_1ae15ecdae1f88836eb4333a4f5b41019e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrCompressor<sp/><ref refid="struct_zarr_compression_settings_ae15ecdae1f88836eb4333a4f5b41019e_1ae15ecdae1f88836eb4333a4f5b41019e" kindref="member">compressor</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="113" refid="struct_zarr_compression_settings_a1982ea0bf30f7e890738367a203af15d_1a1982ea0bf30f7e890738367a203af15d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrCompressionCodec<sp/><ref refid="struct_zarr_compression_settings_a1982ea0bf30f7e890738367a203af15d_1a1982ea0bf30f7e890738367a203af15d" kindref="member">codec</ref>;<sp/></highlight></codeline>
+<codeline lineno="114" refid="struct_zarr_compression_settings_a889112581f4bf1be313467e7964fdab5_1a889112581f4bf1be313467e7964fdab5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_zarr_compression_settings_a889112581f4bf1be313467e7964fdab5_1a889112581f4bf1be313467e7964fdab5" kindref="member">level</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115" refid="struct_zarr_compression_settings_a0edc976983c62ceea11f43a9195f2e4c_1a0edc976983c62ceea11f43a9195f2e4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_zarr_compression_settings_a0edc976983c62ceea11f43a9195f2e4c_1a0edc976983c62ceea11f43a9195f2e4c" kindref="member">shuffle</ref>;<sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="struct_zarr_compression_settings" kindref="compound">ZarrCompressionSettings</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="struct_zarr_dimension_properties" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="123" refid="struct_zarr_dimension_properties_afd94303e63eda420f646fe2c256b8d07_1afd94303e63eda420f646fe2c256b8d07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct_zarr_dimension_properties_afd94303e63eda420f646fe2c256b8d07_1afd94303e63eda420f646fe2c256b8d07" kindref="member">name</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124" refid="struct_zarr_dimension_properties_aabb68f78e50454e92ed877cecfe10333_1aabb68f78e50454e92ed877cecfe10333" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDimensionType<sp/><ref refid="struct_zarr_dimension_properties_aabb68f78e50454e92ed877cecfe10333_1aabb68f78e50454e92ed877cecfe10333" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="125" refid="struct_zarr_dimension_properties_a6e3ff98864c9339f8c3e4ae8d9ce8a67_1a6e3ff98864c9339f8c3e4ae8d9ce8a67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_zarr_dimension_properties_a6e3ff98864c9339f8c3e4ae8d9ce8a67_1a6e3ff98864c9339f8c3e4ae8d9ce8a67" kindref="member">array_size_px</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="127" refid="struct_zarr_dimension_properties_a1f81ea7441451b6591b443e0f93966ec_1a1f81ea7441451b6591b443e0f93966ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_zarr_dimension_properties_a1f81ea7441451b6591b443e0f93966ec_1a1f81ea7441451b6591b443e0f93966ec" kindref="member">chunk_size_px</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129" refid="struct_zarr_dimension_properties_ab804a67dae0d7299598e2a60db34a57d_1ab804a67dae0d7299598e2a60db34a57d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_zarr_dimension_properties_ab804a67dae0d7299598e2a60db34a57d_1ab804a67dae0d7299598e2a60db34a57d" kindref="member">shard_size_chunks</ref>;<sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>unit;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="132" refid="struct_zarr_dimension_properties_a01a02a5cf1b931f2cfaebd3ee8c29879_1a01a02a5cf1b931f2cfaebd3ee8c29879" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_zarr_dimension_properties_a01a02a5cf1b931f2cfaebd3ee8c29879_1a01a02a5cf1b931f2cfaebd3ee8c29879" kindref="member">scale</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="struct_zarr_dimension_properties" kindref="compound">ZarrDimensionProperties</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="struct_zarr_array_settings" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>output_key;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_zarr_compression_settings" kindref="compound">ZarrCompressionSettings</ref>*<sp/>compression_settings;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_zarr_dimension_properties" kindref="compound">ZarrDimensionProperties</ref>*<sp/>dimensions;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dimension_count;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDataType<sp/>data_type;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>multiscale;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZarrDownsamplingMethod<sp/>downsampling_method;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="struct_zarr_array_settings" kindref="compound">ZarrArraySettings</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="struct_zarr_h_c_s_field_of_view" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="159" refid="struct_zarr_h_c_s_field_of_view_adddcbe0f8a10900b1135c570874f76ad_1adddcbe0f8a10900b1135c570874f76ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct_zarr_h_c_s_field_of_view_adddcbe0f8a10900b1135c570874f76ad_1adddcbe0f8a10900b1135c570874f76ad" kindref="member">path</ref>;<sp/></highlight></codeline>
+<codeline lineno="160" refid="struct_zarr_h_c_s_field_of_view_aeaadfd712d96305c318f46fa3f033e95_1aeaadfd712d96305c318f46fa3f033e95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_zarr_h_c_s_field_of_view_aeaadfd712d96305c318f46fa3f033e95_1aeaadfd712d96305c318f46fa3f033e95" kindref="member">acquisition_id</ref>;<sp/></highlight></codeline>
+<codeline lineno="161" refid="struct_zarr_h_c_s_field_of_view_ad3421d563fbd4fb3c25928f1ffa16401_1ad3421d563fbd4fb3c25928f1ffa16401" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_zarr_h_c_s_field_of_view_ad3421d563fbd4fb3c25928f1ffa16401_1ad3421d563fbd4fb3c25928f1ffa16401" kindref="member">has_acquisition_id</ref>;<sp/></highlight></codeline>
+<codeline lineno="162" refid="struct_zarr_h_c_s_field_of_view_a9864c430bffeeb51ae12557eaa88f54d_1a9864c430bffeeb51ae12557eaa88f54d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_zarr_array_settings" kindref="compound">ZarrArraySettings</ref>*<sp/><ref refid="struct_zarr_h_c_s_field_of_view_a9864c430bffeeb51ae12557eaa88f54d_1a9864c430bffeeb51ae12557eaa88f54d" kindref="member">array_settings</ref>;<sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="struct_zarr_h_c_s_field_of_view" kindref="compound">ZarrHCSFieldOfView</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="struct_zarr_h_c_s_well" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170" refid="struct_zarr_h_c_s_well_ab9566796a3904f26411c75883e5fc8b4_1ab9566796a3904f26411c75883e5fc8b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct_zarr_h_c_s_well_ab9566796a3904f26411c75883e5fc8b4_1ab9566796a3904f26411c75883e5fc8b4" kindref="member">row_name</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="171" refid="struct_zarr_h_c_s_well_a4caf75548b9e62ccfbece223303d3ede_1a4caf75548b9e62ccfbece223303d3ede" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct_zarr_h_c_s_well_a4caf75548b9e62ccfbece223303d3ede_1a4caf75548b9e62ccfbece223303d3ede" kindref="member">column_name</ref>;<sp/></highlight></codeline>
+<codeline lineno="172" refid="struct_zarr_h_c_s_well_a5d0b68f5085806c7d93d8e6248041760_1a5d0b68f5085806c7d93d8e6248041760" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_zarr_h_c_s_field_of_view" kindref="compound">ZarrHCSFieldOfView</ref>*<sp/><ref refid="struct_zarr_h_c_s_well_a5d0b68f5085806c7d93d8e6248041760_1a5d0b68f5085806c7d93d8e6248041760" kindref="member">images</ref>;<sp/></highlight></codeline>
+<codeline lineno="173" refid="struct_zarr_h_c_s_well_abd54740f9e5a9cee3992e561fbdfc3aa_1abd54740f9e5a9cee3992e561fbdfc3aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="struct_zarr_h_c_s_well_abd54740f9e5a9cee3992e561fbdfc3aa_1abd54740f9e5a9cee3992e561fbdfc3aa" kindref="member">image_count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="struct_zarr_h_c_s_well" kindref="compound">ZarrHCSWell</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="struct_zarr_h_c_s_acquisition" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="182" refid="struct_zarr_h_c_s_acquisition_a1867789bad748eddd85f4ee5b84e8a2d_1a1867789bad748eddd85f4ee5b84e8a2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_zarr_h_c_s_acquisition_a1867789bad748eddd85f4ee5b84e8a2d_1a1867789bad748eddd85f4ee5b84e8a2d" kindref="member">id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="183" refid="struct_zarr_h_c_s_acquisition_a558ed1c2c44b9a6a53c25e63b64dece5_1a558ed1c2c44b9a6a53c25e63b64dece5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct_zarr_h_c_s_acquisition_a558ed1c2c44b9a6a53c25e63b64dece5_1a558ed1c2c44b9a6a53c25e63b64dece5" kindref="member">name</ref>;<sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="185" refid="struct_zarr_h_c_s_acquisition_ad8ea68757802be550fd37e7391a41109_1ad8ea68757802be550fd37e7391a41109" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_zarr_h_c_s_acquisition_ad8ea68757802be550fd37e7391a41109_1ad8ea68757802be550fd37e7391a41109" kindref="member">description</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="186" refid="struct_zarr_h_c_s_acquisition_a8bf16535860fb112ce7ab1ef253cc58e_1a8bf16535860fb112ce7ab1ef253cc58e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="struct_zarr_h_c_s_acquisition_a8bf16535860fb112ce7ab1ef253cc58e_1a8bf16535860fb112ce7ab1ef253cc58e" kindref="member">start_time</ref>;<sp/></highlight></codeline>
+<codeline lineno="187" refid="struct_zarr_h_c_s_acquisition_a10770d54c50a95efd840f436786f9c70_1a10770d54c50a95efd840f436786f9c70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_zarr_h_c_s_acquisition_a10770d54c50a95efd840f436786f9c70_1a10770d54c50a95efd840f436786f9c70" kindref="member">has_start_time</ref>;<sp/></highlight></codeline>
+<codeline lineno="188" refid="struct_zarr_h_c_s_acquisition_ab1d333e461a56465904a3e38acd03a92_1ab1d333e461a56465904a3e38acd03a92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="struct_zarr_h_c_s_acquisition_ab1d333e461a56465904a3e38acd03a92_1ab1d333e461a56465904a3e38acd03a92" kindref="member">end_time</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="189" refid="struct_zarr_h_c_s_acquisition_a8f48d79776cac7981ce3faf13ddc5a0f_1a8f48d79776cac7981ce3faf13ddc5a0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_zarr_h_c_s_acquisition_a8f48d79776cac7981ce3faf13ddc5a0f_1a8f48d79776cac7981ce3faf13ddc5a0f" kindref="member">has_end_time</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="struct_zarr_h_c_s_acquisition" kindref="compound">ZarrHCSAcquisition</ref>;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="struct_zarr_h_c_s_plate" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="197" refid="struct_zarr_h_c_s_plate_aa0c4af455e6e718eee0798c23e7547b8_1aa0c4af455e6e718eee0798c23e7547b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct_zarr_h_c_s_plate_aa0c4af455e6e718eee0798c23e7547b8_1aa0c4af455e6e718eee0798c23e7547b8" kindref="member">path</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="198" refid="struct_zarr_h_c_s_plate_a4aafaa1dca510c09307b67344a23b157_1a4aafaa1dca510c09307b67344a23b157" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct_zarr_h_c_s_plate_a4aafaa1dca510c09307b67344a23b157_1a4aafaa1dca510c09307b67344a23b157" kindref="member">name</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="199" refid="struct_zarr_h_c_s_plate_abe316cff5bcb695f1a26bae20ac83c08_1abe316cff5bcb695f1a26bae20ac83c08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/><ref refid="struct_zarr_h_c_s_plate_abe316cff5bcb695f1a26bae20ac83c08_1abe316cff5bcb695f1a26bae20ac83c08" kindref="member">row_names</ref>;<sp/></highlight></codeline>
+<codeline lineno="200" refid="struct_zarr_h_c_s_plate_aba40df71c0f3ddde3f7565d86ba6ce1f_1aba40df71c0f3ddde3f7565d86ba6ce1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="struct_zarr_h_c_s_plate_aba40df71c0f3ddde3f7565d86ba6ce1f_1aba40df71c0f3ddde3f7565d86ba6ce1f" kindref="member">row_count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="201" refid="struct_zarr_h_c_s_plate_a60fc6e16e954b57a8c7351053ad5fe21_1a60fc6e16e954b57a8c7351053ad5fe21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/><ref refid="struct_zarr_h_c_s_plate_a60fc6e16e954b57a8c7351053ad5fe21_1a60fc6e16e954b57a8c7351053ad5fe21" kindref="member">column_names</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="202" refid="struct_zarr_h_c_s_plate_a3f04bf79936526a822519169bbbd4cf3_1a3f04bf79936526a822519169bbbd4cf3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="struct_zarr_h_c_s_plate_a3f04bf79936526a822519169bbbd4cf3_1a3f04bf79936526a822519169bbbd4cf3" kindref="member">column_count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="203" refid="struct_zarr_h_c_s_plate_a2bdb0825ec88bb8b0a3b48b35a790fb0_1a2bdb0825ec88bb8b0a3b48b35a790fb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_zarr_h_c_s_well" kindref="compound">ZarrHCSWell</ref>*<sp/><ref refid="struct_zarr_h_c_s_plate_a2bdb0825ec88bb8b0a3b48b35a790fb0_1a2bdb0825ec88bb8b0a3b48b35a790fb0" kindref="member">wells</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="204" refid="struct_zarr_h_c_s_plate_ae939f5d572fdf15d006807e9d12f2ef7_1ae939f5d572fdf15d006807e9d12f2ef7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="struct_zarr_h_c_s_plate_ae939f5d572fdf15d006807e9d12f2ef7_1ae939f5d572fdf15d006807e9d12f2ef7" kindref="member">well_count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="205" refid="struct_zarr_h_c_s_plate_aa58fc6724d23972b0c2eac81966995c0_1aa58fc6724d23972b0c2eac81966995c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_zarr_h_c_s_acquisition" kindref="compound">ZarrHCSAcquisition</ref>*<sp/><ref refid="struct_zarr_h_c_s_plate_aa58fc6724d23972b0c2eac81966995c0_1aa58fc6724d23972b0c2eac81966995c0" kindref="member">acquisitions</ref>;<sp/></highlight></codeline>
+<codeline lineno="206" refid="struct_zarr_h_c_s_plate_ad52e1be21588c56d1829d3afc368569b_1ad52e1be21588c56d1829d3afc368569b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="struct_zarr_h_c_s_plate_ad52e1be21588c56d1829d3afc368569b_1ad52e1be21588c56d1829d3afc368569b" kindref="member">acquisition_count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="struct_zarr_h_c_s_plate" kindref="compound">ZarrHCSPlate</ref>;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="struct_zarr_h_c_s_settings" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="216" refid="struct_zarr_h_c_s_settings_a26b039393c99b9f01f2fe0894f3917ba_1a26b039393c99b9f01f2fe0894f3917ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_zarr_h_c_s_plate" kindref="compound">ZarrHCSPlate</ref>*<sp/><ref refid="struct_zarr_h_c_s_settings_a26b039393c99b9f01f2fe0894f3917ba_1a26b039393c99b9f01f2fe0894f3917ba" kindref="member">plates</ref>;<sp/></highlight></codeline>
+<codeline lineno="217" refid="struct_zarr_h_c_s_settings_afbd9aa4df35335dcb44a01f268732345_1afbd9aa4df35335dcb44a01f268732345" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="struct_zarr_h_c_s_settings_afbd9aa4df35335dcb44a01f268732345_1afbd9aa4df35335dcb44a01f268732345" kindref="member">plate_count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="struct_zarr_h_c_s_settings" kindref="compound">ZarrHCSSettings</ref>;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>H_ACQUIRE_ZARR_TYPES_V0</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/repos/acquire-zarr/include/zarr.types.h"/>
+  </compounddef>
+</doxygen>

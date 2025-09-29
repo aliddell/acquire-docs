@@ -1,0 +1,15 @@
+\doxysection{Zarr\+Array\+Settings}
+\hypertarget{struct_zarr_array_settings}{}\label{struct_zarr_array_settings}\index{ZarrArraySettings@{ZarrArraySettings}}
+
+
+Properties of a Zarr array.  
+
+
+
+
+\doxysubsection{Detailed Description}
+Properties of a Zarr array. 
+
+\begin{DoxyNote}{Note}
+The dimensions array may be allocated with Zarr\+Array\+Settings\+\_\+create\+\_\+dimension\+\_\+array and freed with Zarr\+Array\+Settings\+\_\+destroy\+\_\+dimension\+\_\+array. The order in which you set the dimension properties in the array should match the order of the dimensions from slowest to fastest changing, for example, \mbox{[}Z, Y, X\mbox{]} for a 3D dataset. 
+\end{DoxyNote}

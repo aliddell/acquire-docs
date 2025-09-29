@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="struct_zarr_array_settings" kind="struct"><name>ZarrArraySettings</name>
+    <member refid="struct_zarr_array_settings_1a72719cae2ae951a343256963d74b3d79" kind="variable"><name>output_key</name></member>
+    <member refid="struct_zarr_array_settings_1a1098f0b66ba82f72b8b57f4ee45a97cc" kind="variable"><name>compression_settings</name></member>
+    <member refid="struct_zarr_array_settings_1abd0aca784469630ea8972558ff2df2fe" kind="variable"><name>dimensions</name></member>
+    <member refid="struct_zarr_array_settings_1aff3cb5f63ca1bb2e6100f5a48b8b75f7" kind="variable"><name>dimension_count</name></member>
+    <member refid="struct_zarr_array_settings_1a230b1d9b11c3e6f1f10279e8b19672ee" kind="variable"><name>data_type</name></member>
+    <member refid="struct_zarr_array_settings_1aace230c5ab87f2617583ae7469e9b9fd" kind="variable"><name>multiscale</name></member>
+    <member refid="struct_zarr_array_settings_1a703a7cd72c39badf561cbb23cc3d0164" kind="variable"><name>downsampling_method</name></member>
+  </compound>
+  <compound refid="struct_zarr_compression_settings" kind="struct"><name>ZarrCompressionSettings</name>
+    <member refid="struct_zarr_compression_settings_ae15ecdae1f88836eb4333a4f5b41019e_1ae15ecdae1f88836eb4333a4f5b41019e" kind="variable"><name>compressor</name></member>
+    <member refid="struct_zarr_compression_settings_a1982ea0bf30f7e890738367a203af15d_1a1982ea0bf30f7e890738367a203af15d" kind="variable"><name>codec</name></member>
+    <member refid="struct_zarr_compression_settings_a889112581f4bf1be313467e7964fdab5_1a889112581f4bf1be313467e7964fdab5" kind="variable"><name>level</name></member>
+    <member refid="struct_zarr_compression_settings_a0edc976983c62ceea11f43a9195f2e4c_1a0edc976983c62ceea11f43a9195f2e4c" kind="variable"><name>shuffle</name></member>
+  </compound>
+  <compound refid="struct_zarr_dimension_properties" kind="struct"><name>ZarrDimensionProperties</name>
+    <member refid="struct_zarr_dimension_properties_afd94303e63eda420f646fe2c256b8d07_1afd94303e63eda420f646fe2c256b8d07" kind="variable"><name>name</name></member>
+    <member refid="struct_zarr_dimension_properties_aabb68f78e50454e92ed877cecfe10333_1aabb68f78e50454e92ed877cecfe10333" kind="variable"><name>type</name></member>
+    <member refid="struct_zarr_dimension_properties_a6e3ff98864c9339f8c3e4ae8d9ce8a67_1a6e3ff98864c9339f8c3e4ae8d9ce8a67" kind="variable"><name>array_size_px</name></member>
+    <member refid="struct_zarr_dimension_properties_a1f81ea7441451b6591b443e0f93966ec_1a1f81ea7441451b6591b443e0f93966ec" kind="variable"><name>chunk_size_px</name></member>
+    <member refid="struct_zarr_dimension_properties_ab804a67dae0d7299598e2a60db34a57d_1ab804a67dae0d7299598e2a60db34a57d" kind="variable"><name>shard_size_chunks</name></member>
+    <member refid="struct_zarr_dimension_properties_1ab16e58705b5b101f5b33b517556413b9" kind="variable"><name>unit</name></member>
+    <member refid="struct_zarr_dimension_properties_a01a02a5cf1b931f2cfaebd3ee8c29879_1a01a02a5cf1b931f2cfaebd3ee8c29879" kind="variable"><name>scale</name></member>
+  </compound>
+  <compound refid="struct_zarr_h_c_s_acquisition" kind="struct"><name>ZarrHCSAcquisition</name>
+    <member refid="struct_zarr_h_c_s_acquisition_a1867789bad748eddd85f4ee5b84e8a2d_1a1867789bad748eddd85f4ee5b84e8a2d" kind="variable"><name>id</name></member>
+    <member refid="struct_zarr_h_c_s_acquisition_a558ed1c2c44b9a6a53c25e63b64dece5_1a558ed1c2c44b9a6a53c25e63b64dece5" kind="variable"><name>name</name></member>
+    <member refid="struct_zarr_h_c_s_acquisition_ad8ea68757802be550fd37e7391a41109_1ad8ea68757802be550fd37e7391a41109" kind="variable"><name>description</name></member>
+    <member refid="struct_zarr_h_c_s_acquisition_a8bf16535860fb112ce7ab1ef253cc58e_1a8bf16535860fb112ce7ab1ef253cc58e" kind="variable"><name>start_time</name></member>
+    <member refid="struct_zarr_h_c_s_acquisition_a10770d54c50a95efd840f436786f9c70_1a10770d54c50a95efd840f436786f9c70" kind="variable"><name>has_start_time</name></member>
+    <member refid="struct_zarr_h_c_s_acquisition_ab1d333e461a56465904a3e38acd03a92_1ab1d333e461a56465904a3e38acd03a92" kind="variable"><name>end_time</name></member>
+    <member refid="struct_zarr_h_c_s_acquisition_a8f48d79776cac7981ce3faf13ddc5a0f_1a8f48d79776cac7981ce3faf13ddc5a0f" kind="variable"><name>has_end_time</name></member>
+  </compound>
+  <compound refid="struct_zarr_h_c_s_field_of_view" kind="struct"><name>ZarrHCSFieldOfView</name>
+    <member refid="struct_zarr_h_c_s_field_of_view_adddcbe0f8a10900b1135c570874f76ad_1adddcbe0f8a10900b1135c570874f76ad" kind="variable"><name>path</name></member>
+    <member refid="struct_zarr_h_c_s_field_of_view_aeaadfd712d96305c318f46fa3f033e95_1aeaadfd712d96305c318f46fa3f033e95" kind="variable"><name>acquisition_id</name></member>
+    <member refid="struct_zarr_h_c_s_field_of_view_ad3421d563fbd4fb3c25928f1ffa16401_1ad3421d563fbd4fb3c25928f1ffa16401" kind="variable"><name>has_acquisition_id</name></member>
+    <member refid="struct_zarr_h_c_s_field_of_view_a9864c430bffeeb51ae12557eaa88f54d_1a9864c430bffeeb51ae12557eaa88f54d" kind="variable"><name>array_settings</name></member>
+  </compound>
+  <compound refid="struct_zarr_h_c_s_plate" kind="struct"><name>ZarrHCSPlate</name>
+    <member refid="struct_zarr_h_c_s_plate_aa0c4af455e6e718eee0798c23e7547b8_1aa0c4af455e6e718eee0798c23e7547b8" kind="variable"><name>path</name></member>
+    <member refid="struct_zarr_h_c_s_plate_a4aafaa1dca510c09307b67344a23b157_1a4aafaa1dca510c09307b67344a23b157" kind="variable"><name>name</name></member>
+    <member refid="struct_zarr_h_c_s_plate_abe316cff5bcb695f1a26bae20ac83c08_1abe316cff5bcb695f1a26bae20ac83c08" kind="variable"><name>row_names</name></member>
+    <member refid="struct_zarr_h_c_s_plate_aba40df71c0f3ddde3f7565d86ba6ce1f_1aba40df71c0f3ddde3f7565d86ba6ce1f" kind="variable"><name>row_count</name></member>
+    <member refid="struct_zarr_h_c_s_plate_a60fc6e16e954b57a8c7351053ad5fe21_1a60fc6e16e954b57a8c7351053ad5fe21" kind="variable"><name>column_names</name></member>
+    <member refid="struct_zarr_h_c_s_plate_a3f04bf79936526a822519169bbbd4cf3_1a3f04bf79936526a822519169bbbd4cf3" kind="variable"><name>column_count</name></member>
+    <member refid="struct_zarr_h_c_s_plate_a2bdb0825ec88bb8b0a3b48b35a790fb0_1a2bdb0825ec88bb8b0a3b48b35a790fb0" kind="variable"><name>wells</name></member>
+    <member refid="struct_zarr_h_c_s_plate_ae939f5d572fdf15d006807e9d12f2ef7_1ae939f5d572fdf15d006807e9d12f2ef7" kind="variable"><name>well_count</name></member>
+    <member refid="struct_zarr_h_c_s_plate_aa58fc6724d23972b0c2eac81966995c0_1aa58fc6724d23972b0c2eac81966995c0" kind="variable"><name>acquisitions</name></member>
+    <member refid="struct_zarr_h_c_s_plate_ad52e1be21588c56d1829d3afc368569b_1ad52e1be21588c56d1829d3afc368569b" kind="variable"><name>acquisition_count</name></member>
+  </compound>
+  <compound refid="struct_zarr_h_c_s_settings" kind="struct"><name>ZarrHCSSettings</name>
+    <member refid="struct_zarr_h_c_s_settings_a26b039393c99b9f01f2fe0894f3917ba_1a26b039393c99b9f01f2fe0894f3917ba" kind="variable"><name>plates</name></member>
+    <member refid="struct_zarr_h_c_s_settings_afbd9aa4df35335dcb44a01f268732345_1afbd9aa4df35335dcb44a01f268732345" kind="variable"><name>plate_count</name></member>
+  </compound>
+  <compound refid="struct_zarr_h_c_s_well" kind="struct"><name>ZarrHCSWell</name>
+    <member refid="struct_zarr_h_c_s_well_ab9566796a3904f26411c75883e5fc8b4_1ab9566796a3904f26411c75883e5fc8b4" kind="variable"><name>row_name</name></member>
+    <member refid="struct_zarr_h_c_s_well_a4caf75548b9e62ccfbece223303d3ede_1a4caf75548b9e62ccfbece223303d3ede" kind="variable"><name>column_name</name></member>
+    <member refid="struct_zarr_h_c_s_well_a5d0b68f5085806c7d93d8e6248041760_1a5d0b68f5085806c7d93d8e6248041760" kind="variable"><name>images</name></member>
+    <member refid="struct_zarr_h_c_s_well_abd54740f9e5a9cee3992e561fbdfc3aa_1abd54740f9e5a9cee3992e561fbdfc3aa" kind="variable"><name>image_count</name></member>
+  </compound>
+  <compound refid="struct_zarr_s3_settings" kind="struct"><name>ZarrS3Settings</name>
+    <member refid="struct_zarr_s3_settings_1a06fca92d76309220a2b932c83ebf0468" kind="variable"><name>endpoint</name></member>
+    <member refid="struct_zarr_s3_settings_1a43cfff2d57146dd44aa32121f26b4930" kind="variable"><name>bucket_name</name></member>
+    <member refid="struct_zarr_s3_settings_1a5e60fc689b211c6d3f61bfb4c1361c3e" kind="variable"><name>region</name></member>
+  </compound>
+  <compound refid="struct_zarr_stream_settings" kind="struct"><name>ZarrStreamSettings</name>
+    <member refid="struct_zarr_stream_settings_a4e324e448a455f2101d0095f1a31a59a_1a4e324e448a455f2101d0095f1a31a59a" kind="variable"><name>store_path</name></member>
+    <member refid="struct_zarr_stream_settings_ae51f0e626a586e4566f537514f5a69d5_1ae51f0e626a586e4566f537514f5a69d5" kind="variable"><name>s3_settings</name></member>
+    <member refid="struct_zarr_stream_settings_ada644bd2cf3dcd6e19d6cadfceac94e0_1ada644bd2cf3dcd6e19d6cadfceac94e0" kind="variable"><name>version</name></member>
+    <member refid="struct_zarr_stream_settings_aa4a974104042f5cc78b5ad01543fcbf2_1aa4a974104042f5cc78b5ad01543fcbf2" kind="variable"><name>max_threads</name></member>
+    <member refid="struct_zarr_stream_settings_a2801af08755523563bb880621565ca9b_1a2801af08755523563bb880621565ca9b" kind="variable"><name>overwrite</name></member>
+    <member refid="struct_zarr_stream_settings_a44f78c871ee12d3ee7c878bb48cf521d_1a44f78c871ee12d3ee7c878bb48cf521d" kind="variable"><name>arrays</name></member>
+    <member refid="struct_zarr_stream_settings_a9b7dc1768c72cec66774b85ae95c345b_1a9b7dc1768c72cec66774b85ae95c345b" kind="variable"><name>array_count</name></member>
+    <member refid="struct_zarr_stream_settings_a36e1a43d908ed794ac5f84ff9b15a6f6_1a36e1a43d908ed794ac5f84ff9b15a6f6" kind="variable"><name>hcs_settings</name></member>
+  </compound>
+  <compound refid="acquire_8zarr_8h" kind="file"><name>acquire.zarr.h</name>
+    <member refid="acquire_8zarr_8h_1afa4fdb6226bd1eb0a565f275bec5cde1" kind="typedef"><name>ZarrStream</name></member>
+    <member refid="acquire_8zarr_8h_abc5be8c7786118cc4ac3be6c083e0c47_1abc5be8c7786118cc4ac3be6c083e0c47" kind="function"><name>Zarr_get_api_version</name></member>
+    <member refid="acquire_8zarr_8h_ac0a234f5f669d198eba7a2b6a4b16781_1ac0a234f5f669d198eba7a2b6a4b16781" kind="function"><name>Zarr_set_log_level</name></member>
+    <member refid="acquire_8zarr_8h_afc7914d0585829c89f7c9a15d5f13098_1afc7914d0585829c89f7c9a15d5f13098" kind="function"><name>Zarr_get_log_level</name></member>
+    <member refid="acquire_8zarr_8h_ad5a5e0fe9c333acef4d30100a77c6e66_1ad5a5e0fe9c333acef4d30100a77c6e66" kind="function"><name>Zarr_get_status_message</name></member>
+    <member refid="acquire_8zarr_8h_a7a2d493693395144ac15c2d588a8d4c0_1a7a2d493693395144ac15c2d588a8d4c0" kind="function"><name>ZarrStreamSettings_create_arrays</name></member>
+    <member refid="acquire_8zarr_8h_a800cd95e26f59f50d6a0669b721abdf4_1a800cd95e26f59f50d6a0669b721abdf4" kind="function"><name>ZarrStreamSettings_destroy_arrays</name></member>
+    <member refid="acquire_8zarr_8h_a6578c9f628e56ff924f9e7c56e80828b_1a6578c9f628e56ff924f9e7c56e80828b" kind="function"><name>ZarrStreamSettings_estimate_max_memory_usage</name></member>
+    <member refid="acquire_8zarr_8h_a1a66b737f48093b6d460f3c64ef6e690_1a1a66b737f48093b6d460f3c64ef6e690" kind="function"><name>ZarrStreamSettings_get_array_count</name></member>
+    <member refid="acquire_8zarr_8h_a5b59916b16880822033d1df58353c91a_1a5b59916b16880822033d1df58353c91a" kind="function"><name>ZarrStreamSettings_get_array_key</name></member>
+    <member refid="acquire_8zarr_8h_a0132d0890eb71a787b5f8653e8b1aa15_1a0132d0890eb71a787b5f8653e8b1aa15" kind="function"><name>ZarrArraySettings_create_dimension_array</name></member>
+    <member refid="acquire_8zarr_8h_a2b677831292c54a27b02e78b7c3a698e_1a2b677831292c54a27b02e78b7c3a698e" kind="function"><name>ZarrArraySettings_destroy_dimension_array</name></member>
+    <member refid="acquire_8zarr_8h_a602c3f1db2b94f3d53acba1ed5550a70_1a602c3f1db2b94f3d53acba1ed5550a70" kind="function"><name>ZarrHCSWell_create_image_array</name></member>
+    <member refid="acquire_8zarr_8h_a20aaabe5aa84eabc88af2bfe3634af46_1a20aaabe5aa84eabc88af2bfe3634af46" kind="function"><name>ZarrHCSWell_destroy_image_array</name></member>
+    <member refid="acquire_8zarr_8h_aaefbc0abd43fb0ffd82ff99ba45222ff_1aaefbc0abd43fb0ffd82ff99ba45222ff" kind="function"><name>ZarrHCSPlate_create_well_array</name></member>
+    <member refid="acquire_8zarr_8h_a375acb62cd8a70374f89945c3fb0eb90_1a375acb62cd8a70374f89945c3fb0eb90" kind="function"><name>ZarrHCSPlate_destroy_well_array</name></member>
+    <member refid="acquire_8zarr_8h_a33ca5c1815827f74c6f399a6a1ae451e_1a33ca5c1815827f74c6f399a6a1ae451e" kind="function"><name>ZarrHCSPlate_create_acquisition_array</name></member>
+    <member refid="acquire_8zarr_8h_a29808d7ca6dc606c24ca7b70603165ea_1a29808d7ca6dc606c24ca7b70603165ea" kind="function"><name>ZarrHCSPlate_destroy_acquisition_array</name></member>
+    <member refid="acquire_8zarr_8h_a9bd213586362bf019768f7e810707a50_1a9bd213586362bf019768f7e810707a50" kind="function"><name>ZarrHCSPlate_create_row_name_array</name></member>
+    <member refid="acquire_8zarr_8h_a2d65be7bbe0cef433251ea6dc5e6319d_1a2d65be7bbe0cef433251ea6dc5e6319d" kind="function"><name>ZarrHCSPlate_destroy_row_name_array</name></member>
+    <member refid="acquire_8zarr_8h_a11268d776c720df02722a5d56f4b4cb5_1a11268d776c720df02722a5d56f4b4cb5" kind="function"><name>ZarrHCSPlate_create_column_name_array</name></member>
+    <member refid="acquire_8zarr_8h_a30d68f8c68f27939b2ac782ea1e477c9_1a30d68f8c68f27939b2ac782ea1e477c9" kind="function"><name>ZarrHCSPlate_destroy_column_name_array</name></member>
+    <member refid="acquire_8zarr_8h_a526bd11137084ba6760d8e9065cf21a3_1a526bd11137084ba6760d8e9065cf21a3" kind="function"><name>ZarrHCSSettings_create_plate_array</name></member>
+    <member refid="acquire_8zarr_8h_a65ff05191ed08013acd8fcd1205bc3f0_1a65ff05191ed08013acd8fcd1205bc3f0" kind="function"><name>ZarrHCSSettings_destroy_plate_array</name></member>
+    <member refid="acquire_8zarr_8h_ab57d072062f9a8de3e261392ae0c6013_1ab57d072062f9a8de3e261392ae0c6013" kind="function"><name>ZarrStream_create</name></member>
+    <member refid="acquire_8zarr_8h_ab8e0216303891a3ad15b2f90d109bd37_1ab8e0216303891a3ad15b2f90d109bd37" kind="function"><name>ZarrStream_destroy</name></member>
+    <member refid="acquire_8zarr_8h_aab5bf4ba7a7d3fa328e4690cf99af995_1aab5bf4ba7a7d3fa328e4690cf99af995" kind="function"><name>ZarrStream_append</name></member>
+    <member refid="acquire_8zarr_8h_a4f77e323d9000c384a54bc1cb4baacc3_1a4f77e323d9000c384a54bc1cb4baacc3" kind="function"><name>ZarrStream_write_custom_metadata</name></member>
+    <member refid="acquire_8zarr_8h_a2677897b1b94b33d1cb56b20afb9763e_1a2677897b1b94b33d1cb56b20afb9763e" kind="function"><name>ZarrStream_get_current_memory_usage</name></member>
+  </compound>
+  <compound refid="zarr_8types_8h" kind="file"><name>zarr.types.h</name>
+    <member refid="zarr_8types_8h_1af974a576fb9cc15e629ae83b24254e42" kind="enum"><name>ZarrDownsamplingMethod</name></member>
+    <member refid="zarr_8types_8h_1af974a576fb9cc15e629ae83b24254e42af9a74ab9c973bbabbeca84536dfeb9bb" kind="enumvalue"><name>ZarrDownsamplingMethod_Decimate</name></member>
+    <member refid="zarr_8types_8h_1af974a576fb9cc15e629ae83b24254e42ae742b5aa17fadcfb640b6c4f602e8032" kind="enumvalue"><name>ZarrDownsamplingMethod_Mean</name></member>
+    <member refid="zarr_8types_8h_1af974a576fb9cc15e629ae83b24254e42a69746f41ff3847a0de794a8702de79bd" kind="enumvalue"><name>ZarrDownsamplingMethod_Min</name></member>
+    <member refid="zarr_8types_8h_1af974a576fb9cc15e629ae83b24254e42a105ccbd539df8af84f7d4f56e5c2793f" kind="enumvalue"><name>ZarrDownsamplingMethod_Max</name></member>
+    <member refid="zarr_8types_8h_1af974a576fb9cc15e629ae83b24254e42a1ce224607432209428cc182093ae6467" kind="enumvalue"><name>ZarrDownsamplingMethodCount</name></member>
+  </compound>
+  <compound refid="dir_333e6df7611621adb9e912e152b800c4" kind="dir"><name>C:/repos/acquire-zarr</name>
+  </compound>
+  <compound refid="dir_ccebfe39b92f73ccebee9a2fb203dc1b" kind="dir"><name>C:/repos/acquire-zarr/include</name>
+  </compound>
+</doxygenindex>

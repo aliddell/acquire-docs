@@ -1,0 +1,86 @@
+\doxysection{Zarr\+Stream\+Settings}
+\hypertarget{struct_zarr_stream_settings}{}\label{struct_zarr_stream_settings}\index{ZarrStreamSettings@{ZarrStreamSettings}}
+
+
+The settings for a Zarr stream.  
+
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_zarr_stream_settings_a4e324e448a455f2101d0095f1a31a59a_a4e324e448a455f2101d0095f1a31a59a}{store\+\_\+path}}
+\item 
+\mbox{\hyperlink{struct_zarr_s3_settings}{Zarr\+S3\+Settings}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_zarr_stream_settings_ae51f0e626a586e4566f537514f5a69d5_ae51f0e626a586e4566f537514f5a69d5}{s3\+\_\+settings}}
+\item 
+Zarr\+Version \mbox{\hyperlink{struct_zarr_stream_settings_ada644bd2cf3dcd6e19d6cadfceac94e0_ada644bd2cf3dcd6e19d6cadfceac94e0}{version}}
+\item 
+unsigned int \mbox{\hyperlink{struct_zarr_stream_settings_aa4a974104042f5cc78b5ad01543fcbf2_aa4a974104042f5cc78b5ad01543fcbf2}{max\+\_\+threads}}
+\item 
+bool \mbox{\hyperlink{struct_zarr_stream_settings_a2801af08755523563bb880621565ca9b_a2801af08755523563bb880621565ca9b}{overwrite}}
+\item 
+\mbox{\hyperlink{struct_zarr_array_settings}{Zarr\+Array\+Settings}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_zarr_stream_settings_a44f78c871ee12d3ee7c878bb48cf521d_a44f78c871ee12d3ee7c878bb48cf521d}{arrays}}
+\item 
+size\+\_\+t \mbox{\hyperlink{struct_zarr_stream_settings_a9b7dc1768c72cec66774b85ae95c345b_a9b7dc1768c72cec66774b85ae95c345b}{array\+\_\+count}}
+\item 
+\mbox{\hyperlink{struct_zarr_h_c_s_settings}{Zarr\+HCSSettings}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_zarr_stream_settings_a36e1a43d908ed794ac5f84ff9b15a6f6_a36e1a43d908ed794ac5f84ff9b15a6f6}{hcs\+\_\+settings}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The settings for a Zarr stream. 
+
+This struct contains the settings for a Zarr stream, including the store path, custom metadata, S3 settings, chunk compression settings, dimension properties, whether to stream to multiple levels of detail, the pixel data type, and the Zarr format version. \begin{DoxyNote}{Note}
+The store path can be a filesystem path or an S3 key prefix. For example, supplying an endpoint "{}s3\+://my-\/endpoint.\+com"{} and a bucket "{}my-\/bucket"{} with a store\+\_\+path of "{}my-\/dataset.\+zarr"{} will result in the store being written to "{}s3\+://my-\/endpoint.\+com/my-\/bucket/my-\/dataset.\+zarr"{}. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_zarr_stream_settings_a9b7dc1768c72cec66774b85ae95c345b_a9b7dc1768c72cec66774b85ae95c345b}\index{ZarrStreamSettings@{ZarrStreamSettings}!array\_count@{array\_count}}
+\index{array\_count@{array\_count}!ZarrStreamSettings@{ZarrStreamSettings}}
+\doxysubsubsection{\texorpdfstring{array\_count}{array\_count}}
+{\footnotesize\ttfamily \label{struct_zarr_stream_settings_a9b7dc1768c72cec66774b85ae95c345b_a9b7dc1768c72cec66774b85ae95c345b} 
+size\+\_\+t Zarr\+Stream\+Settings\+::array\+\_\+count}
+
+The number of arrays in the Zarr stream. \Hypertarget{struct_zarr_stream_settings_a44f78c871ee12d3ee7c878bb48cf521d_a44f78c871ee12d3ee7c878bb48cf521d}\index{ZarrStreamSettings@{ZarrStreamSettings}!arrays@{arrays}}
+\index{arrays@{arrays}!ZarrStreamSettings@{ZarrStreamSettings}}
+\doxysubsubsection{\texorpdfstring{arrays}{arrays}}
+{\footnotesize\ttfamily \label{struct_zarr_stream_settings_a44f78c871ee12d3ee7c878bb48cf521d_a44f78c871ee12d3ee7c878bb48cf521d} 
+\mbox{\hyperlink{struct_zarr_array_settings}{Zarr\+Array\+Settings}}\texorpdfstring{$\ast$}{*} Zarr\+Stream\+Settings\+::arrays}
+
+The settings for the Zarr arrays being streamed. \Hypertarget{struct_zarr_stream_settings_a36e1a43d908ed794ac5f84ff9b15a6f6_a36e1a43d908ed794ac5f84ff9b15a6f6}\index{ZarrStreamSettings@{ZarrStreamSettings}!hcs\_settings@{hcs\_settings}}
+\index{hcs\_settings@{hcs\_settings}!ZarrStreamSettings@{ZarrStreamSettings}}
+\doxysubsubsection{\texorpdfstring{hcs\_settings}{hcs\_settings}}
+{\footnotesize\ttfamily \label{struct_zarr_stream_settings_a36e1a43d908ed794ac5f84ff9b15a6f6_a36e1a43d908ed794ac5f84ff9b15a6f6} 
+\mbox{\hyperlink{struct_zarr_h_c_s_settings}{Zarr\+HCSSettings}}\texorpdfstring{$\ast$}{*} Zarr\+Stream\+Settings\+::hcs\+\_\+settings}
+
+Optional HCS plate settings. If non-\/\+NULL, the stream will be configured for HCS data. \Hypertarget{struct_zarr_stream_settings_aa4a974104042f5cc78b5ad01543fcbf2_aa4a974104042f5cc78b5ad01543fcbf2}\index{ZarrStreamSettings@{ZarrStreamSettings}!max\_threads@{max\_threads}}
+\index{max\_threads@{max\_threads}!ZarrStreamSettings@{ZarrStreamSettings}}
+\doxysubsubsection{\texorpdfstring{max\_threads}{max\_threads}}
+{\footnotesize\ttfamily \label{struct_zarr_stream_settings_aa4a974104042f5cc78b5ad01543fcbf2_aa4a974104042f5cc78b5ad01543fcbf2} 
+unsigned int Zarr\+Stream\+Settings\+::max\+\_\+threads}
+
+The maximum number of threads to use in the stream. Set to 0 to use the supported number of concurrent threads. \Hypertarget{struct_zarr_stream_settings_a2801af08755523563bb880621565ca9b_a2801af08755523563bb880621565ca9b}\index{ZarrStreamSettings@{ZarrStreamSettings}!overwrite@{overwrite}}
+\index{overwrite@{overwrite}!ZarrStreamSettings@{ZarrStreamSettings}}
+\doxysubsubsection{\texorpdfstring{overwrite}{overwrite}}
+{\footnotesize\ttfamily \label{struct_zarr_stream_settings_a2801af08755523563bb880621565ca9b_a2801af08755523563bb880621565ca9b} 
+bool Zarr\+Stream\+Settings\+::overwrite}
+
+Remove everything in store\+\_\+path if true. \Hypertarget{struct_zarr_stream_settings_ae51f0e626a586e4566f537514f5a69d5_ae51f0e626a586e4566f537514f5a69d5}\index{ZarrStreamSettings@{ZarrStreamSettings}!s3\_settings@{s3\_settings}}
+\index{s3\_settings@{s3\_settings}!ZarrStreamSettings@{ZarrStreamSettings}}
+\doxysubsubsection{\texorpdfstring{s3\_settings}{s3\_settings}}
+{\footnotesize\ttfamily \label{struct_zarr_stream_settings_ae51f0e626a586e4566f537514f5a69d5_ae51f0e626a586e4566f537514f5a69d5} 
+\mbox{\hyperlink{struct_zarr_s3_settings}{Zarr\+S3\+Settings}}\texorpdfstring{$\ast$}{*} Zarr\+Stream\+Settings\+::s3\+\_\+settings}
+
+Optional S3 settings for the store. \Hypertarget{struct_zarr_stream_settings_a4e324e448a455f2101d0095f1a31a59a_a4e324e448a455f2101d0095f1a31a59a}\index{ZarrStreamSettings@{ZarrStreamSettings}!store\_path@{store\_path}}
+\index{store\_path@{store\_path}!ZarrStreamSettings@{ZarrStreamSettings}}
+\doxysubsubsection{\texorpdfstring{store\_path}{store\_path}}
+{\footnotesize\ttfamily \label{struct_zarr_stream_settings_a4e324e448a455f2101d0095f1a31a59a_a4e324e448a455f2101d0095f1a31a59a} 
+const char\texorpdfstring{$\ast$}{*} Zarr\+Stream\+Settings\+::store\+\_\+path}
+
+Path to the store. Filesystem path or S3 key prefix. \Hypertarget{struct_zarr_stream_settings_ada644bd2cf3dcd6e19d6cadfceac94e0_ada644bd2cf3dcd6e19d6cadfceac94e0}\index{ZarrStreamSettings@{ZarrStreamSettings}!version@{version}}
+\index{version@{version}!ZarrStreamSettings@{ZarrStreamSettings}}
+\doxysubsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily \label{struct_zarr_stream_settings_ada644bd2cf3dcd6e19d6cadfceac94e0_ada644bd2cf3dcd6e19d6cadfceac94e0} 
+Zarr\+Version Zarr\+Stream\+Settings\+::version}
+
+The version of the Zarr format to use. 2 or 3. 

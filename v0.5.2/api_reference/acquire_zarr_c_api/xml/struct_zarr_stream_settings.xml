@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="struct_zarr_stream_settings" kind="struct" language="C++" prot="public">
+    <compoundname>ZarrStreamSettings</compoundname>
+    <includes refid="acquire_8zarr_8h" local="no">acquire.zarr.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_zarr_stream_settings_a4e324e448a455f2101d0095f1a31a59a_1a4e324e448a455f2101d0095f1a31a59a" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* ZarrStreamSettings::store_path</definition>
+        <argsstring></argsstring>
+        <name>store_path</name>
+        <qualifiedname>ZarrStreamSettings::store_path</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Path to the store. Filesystem path or S3 key prefix. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/acquire.zarr.h" line="23" column="20" bodyfile="C:/repos/acquire-zarr/include/acquire.zarr.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_stream_settings_ae51f0e626a586e4566f537514f5a69d5_1ae51f0e626a586e4566f537514f5a69d5" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_zarr_s3_settings" kindref="compound">ZarrS3Settings</ref> *</type>
+        <definition>ZarrS3Settings* ZarrStreamSettings::s3_settings</definition>
+        <argsstring></argsstring>
+        <name>s3_settings</name>
+        <qualifiedname>ZarrStreamSettings::s3_settings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional S3 settings for the store. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/acquire.zarr.h" line="25" column="24" bodyfile="C:/repos/acquire-zarr/include/acquire.zarr.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_stream_settings_ada644bd2cf3dcd6e19d6cadfceac94e0_1ada644bd2cf3dcd6e19d6cadfceac94e0" prot="public" static="no" mutable="no">
+        <type>ZarrVersion</type>
+        <definition>ZarrVersion ZarrStreamSettings::version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <qualifiedname>ZarrStreamSettings::version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The version of the Zarr format to use. 2 or 3. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/acquire.zarr.h" line="27" column="11" bodyfile="C:/repos/acquire-zarr/include/acquire.zarr.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_stream_settings_aa4a974104042f5cc78b5ad01543fcbf2_1aa4a974104042f5cc78b5ad01543fcbf2" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int ZarrStreamSettings::max_threads</definition>
+        <argsstring></argsstring>
+        <name>max_threads</name>
+        <qualifiedname>ZarrStreamSettings::max_threads</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The maximum number of threads to use in the stream. Set to 0 to use the supported number of concurrent threads. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/acquire.zarr.h" line="28" column="22" bodyfile="C:/repos/acquire-zarr/include/acquire.zarr.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_stream_settings_a2801af08755523563bb880621565ca9b_1a2801af08755523563bb880621565ca9b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ZarrStreamSettings::overwrite</definition>
+        <argsstring></argsstring>
+        <name>overwrite</name>
+        <qualifiedname>ZarrStreamSettings::overwrite</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove everything in store_path if true. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/acquire.zarr.h" line="31" column="14" bodyfile="C:/repos/acquire-zarr/include/acquire.zarr.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_stream_settings_a44f78c871ee12d3ee7c878bb48cf521d_1a44f78c871ee12d3ee7c878bb48cf521d" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_zarr_array_settings" kindref="compound">ZarrArraySettings</ref> *</type>
+        <definition>ZarrArraySettings* ZarrStreamSettings::arrays</definition>
+        <argsstring></argsstring>
+        <name>arrays</name>
+        <qualifiedname>ZarrStreamSettings::arrays</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The settings for the Zarr arrays being streamed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/acquire.zarr.h" line="33" column="11" bodyfile="C:/repos/acquire-zarr/include/acquire.zarr.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_stream_settings_a9b7dc1768c72cec66774b85ae95c345b_1a9b7dc1768c72cec66774b85ae95c345b" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ZarrStreamSettings::array_count</definition>
+        <argsstring></argsstring>
+        <name>array_count</name>
+        <qualifiedname>ZarrStreamSettings::array_count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of arrays in the Zarr stream. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/acquire.zarr.h" line="34" column="16" bodyfile="C:/repos/acquire-zarr/include/acquire.zarr.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_zarr_stream_settings_a36e1a43d908ed794ac5f84ff9b15a6f6_1a36e1a43d908ed794ac5f84ff9b15a6f6" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_zarr_h_c_s_settings" kindref="compound">ZarrHCSSettings</ref> *</type>
+        <definition>ZarrHCSSettings* ZarrStreamSettings::hcs_settings</definition>
+        <argsstring></argsstring>
+        <name>hcs_settings</name>
+        <qualifiedname>ZarrStreamSettings::hcs_settings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional HCS plate settings. If non-NULL, the stream will be configured for HCS data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/repos/acquire-zarr/include/acquire.zarr.h" line="35" column="25" bodyfile="C:/repos/acquire-zarr/include/acquire.zarr.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The settings for a Zarr stream. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This struct contains the settings for a Zarr stream, including the store path, custom metadata, S3 settings, chunk compression settings, dimension properties, whether to stream to multiple levels of detail, the pixel data type, and the Zarr format version. <simplesect kind="note"><para>The store path can be a filesystem path or an S3 key prefix. For example, supplying an endpoint &quot;s3://my-endpoint.com&quot; and a bucket &quot;my-bucket&quot; with a store_path of &quot;my-dataset.zarr&quot; will result in the store being written to &quot;s3://my-endpoint.com/my-bucket/my-dataset.zarr&quot;. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>ZarrArraySettings</label>
+        <link refid="struct_zarr_array_settings"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>compression_settings</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>dimensions</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ZarrCompressionSettings</label>
+        <link refid="struct_zarr_compression_settings"/>
+      </node>
+      <node id="5">
+        <label>ZarrDimensionProperties</label>
+        <link refid="struct_zarr_dimension_properties"/>
+      </node>
+      <node id="10">
+        <label>ZarrHCSAcquisition</label>
+        <link refid="struct_zarr_h_c_s_acquisition"/>
+      </node>
+      <node id="9">
+        <label>ZarrHCSFieldOfView</label>
+        <link refid="struct_zarr_h_c_s_field_of_view"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>array_settings</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ZarrHCSPlate</label>
+        <link refid="struct_zarr_h_c_s_plate"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>wells</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>acquisitions</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ZarrHCSSettings</label>
+        <link refid="struct_zarr_h_c_s_settings"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>plates</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ZarrHCSWell</label>
+        <link refid="struct_zarr_h_c_s_well"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>images</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ZarrS3Settings</label>
+        <link refid="struct_zarr_s3_settings"/>
+      </node>
+      <node id="1">
+        <label>ZarrStreamSettings</label>
+        <link refid="struct_zarr_stream_settings"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>s3_settings</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>arrays</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>hcs_settings</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/repos/acquire-zarr/include/acquire.zarr.h" line="21" column="5" bodyfile="C:/repos/acquire-zarr/include/acquire.zarr.h" bodystart="22" bodyend="38"/>
+    <listofallmembers>
+      <member refid="struct_zarr_stream_settings_a9b7dc1768c72cec66774b85ae95c345b_1a9b7dc1768c72cec66774b85ae95c345b" prot="public" virt="non-virtual"><scope>ZarrStreamSettings</scope><name>array_count</name></member>
+      <member refid="struct_zarr_stream_settings_a44f78c871ee12d3ee7c878bb48cf521d_1a44f78c871ee12d3ee7c878bb48cf521d" prot="public" virt="non-virtual"><scope>ZarrStreamSettings</scope><name>arrays</name></member>
+      <member refid="struct_zarr_stream_settings_a36e1a43d908ed794ac5f84ff9b15a6f6_1a36e1a43d908ed794ac5f84ff9b15a6f6" prot="public" virt="non-virtual"><scope>ZarrStreamSettings</scope><name>hcs_settings</name></member>
+      <member refid="struct_zarr_stream_settings_aa4a974104042f5cc78b5ad01543fcbf2_1aa4a974104042f5cc78b5ad01543fcbf2" prot="public" virt="non-virtual"><scope>ZarrStreamSettings</scope><name>max_threads</name></member>
+      <member refid="struct_zarr_stream_settings_a2801af08755523563bb880621565ca9b_1a2801af08755523563bb880621565ca9b" prot="public" virt="non-virtual"><scope>ZarrStreamSettings</scope><name>overwrite</name></member>
+      <member refid="struct_zarr_stream_settings_ae51f0e626a586e4566f537514f5a69d5_1ae51f0e626a586e4566f537514f5a69d5" prot="public" virt="non-virtual"><scope>ZarrStreamSettings</scope><name>s3_settings</name></member>
+      <member refid="struct_zarr_stream_settings_a4e324e448a455f2101d0095f1a31a59a_1a4e324e448a455f2101d0095f1a31a59a" prot="public" virt="non-virtual"><scope>ZarrStreamSettings</scope><name>store_path</name></member>
+      <member refid="struct_zarr_stream_settings_ada644bd2cf3dcd6e19d6cadfceac94e0_1ada644bd2cf3dcd6e19d6cadfceac94e0" prot="public" virt="non-virtual"><scope>ZarrStreamSettings</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
